@@ -1,8 +1,12 @@
 {
-  "task":[
+  "task": [
     {
-      "id":1,
-      "task_name":"learning angular"
+      "id": 1,
+      "task_name": "learning angular"
+    },
+    {
+      "id": 2,
+      "task_name": "this is my first angular app"
     }
   ]
 }

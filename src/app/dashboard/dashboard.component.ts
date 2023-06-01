@@ -14,11 +14,13 @@ export class DashboardComponent implements OnInit {
   taskArr: Task[] = [];
 
   addTaskValue: string = '';
+  editTaskValue : String = '';
   subscription: Subscription | undefined;
 
   constructor(private crudService: CrudService) { }
 
   ngOnInit(): void {
+    this.editTaskValue = '';
     this.addTaskValue = '';
     this.taskObj = new Task();
     this.taskArr = [];
@@ -69,6 +71,11 @@ export class DashboardComponent implements OnInit {
         alert('unable to delete task');
       }
     });
+  }
+
+  call(etask : Task) {
+    this.taskObj = etask;
+    this.editTaskValue = etask.task_name;
   }
 
   ngOnDestroy(): void {
